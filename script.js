@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 const blogData = [
     {
         title: "Top 10 Strategies to Master NEET Physics: From Concepts to Problem-Solving",
@@ -286,3 +275,33 @@ readMoreButtons.forEach((readMoreButton) => {
     })
 
 })
+
+// Slider
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sliderContainer = document.querySelector(".slider-container");
+    const slides = sliderContainer.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    
+    function showSlide(index) {
+        const offset = -index * 100; 
+        sliderContainer.style.transform = `translateX(${offset}%)`;
+        currentSlide = index;
+    }
+
+    
+    function nextSlide() {
+        if (currentSlide < slides.length - 1) {
+            showSlide(currentSlide + 1);
+        } else {
+            showSlide(0); 
+        }
+    }
+
+    
+    setInterval(nextSlide, 3000);
+});
+
+
