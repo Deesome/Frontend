@@ -279,29 +279,24 @@ readMoreButtons.forEach((readMoreButton) => {
 // Slider
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const sliderContainer = document.querySelector(".slider-container");
-    const slides = sliderContainer.querySelectorAll(".slide");
-    let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
 
-    
-    function showSlide(index) {
-        const offset = -index * 100; 
-        sliderContainer.style.transform = `translateX(${offset}%)`;
-        currentSlide = index;
-    }
+// Show the initial slide
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? 'block' : 'none';
+  });
+}
 
-    
-    function nextSlide() {
-        if (currentSlide < slides.length - 1) {
-            showSlide(currentSlide + 1);
-        } else {
-            showSlide(0); 
-        }
-    }
+// Automatically move to the next slide
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
 
-    
-    setInterval(nextSlide, 3000);
-});
+// Initial setup
+showSlide(currentIndex);
+setInterval(nextSlide, 3000); // Adjust timing as needed (3000ms = 3 seconds)
 
 
