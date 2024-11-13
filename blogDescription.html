@@ -104,8 +104,17 @@
         </div>
 
     </footer>
+    <script>
+        const h1 = document.querySelector(".title")
+        const p = document.querySelector(".blog-content")
+        console.log(localStorage)
+        const blogTitle = localStorage.getItem("title")
+        const blogContent =localStorage.getItem("content")
+        h1.innerText = blogTitle;
+        p.innerText=blogContent;
+    </script>
 
    
-
+    
     <script src="ham.js"></script>
     </body>
