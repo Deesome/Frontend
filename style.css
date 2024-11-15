@@ -142,6 +142,7 @@ nav.active ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 /* Show the desktop image by default */
@@ -158,6 +159,8 @@ nav.active ul {
     #slide-tablet {
         display: block;
     }
+    
+   
 }
 
 /* Mobile view */
@@ -1767,7 +1770,7 @@ button:hover {
 }
 
 .copyright-container a {
-    color: #fbc02d; /* Yellow Button Creation brand color */
+    color: #fff100; 
     text-decoration: none;
     font-weight: bold;
 }
