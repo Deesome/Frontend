@@ -507,7 +507,7 @@ nav.active ul {
 .program-card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 
     justify-content: center;
     align-items: center;
@@ -519,7 +519,7 @@ nav.active ul {
 .program-card {
     background-color: #ffffff;
     border-radius: 8px;
-    min-width: 300px;
+    min-width: 400px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 20px;
@@ -541,7 +541,7 @@ nav.active ul {
 }
 
 .program-card p {
-    color: #231f20;
+    color: #333131;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -558,19 +558,21 @@ nav.active ul {
 
 }
 
-.program-card a .enroll {
-    padding: 10px 20px;
+.program-card a{
+    padding: 10px 60px;
     background-color: #231f20;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
-    display: inline-block;
+    width:fit-content;
+    font-size: 1rem;
+    
 
 }
 
-.program-card a .enroll:hover {
+.program-card a:hover {
     background-color: #fff100;
     color: #231f20;
 }
@@ -578,7 +580,7 @@ nav.active ul {
 /* Responsive Grid for Cards */
 @media (min-width: 1024px) {
     .program-card {
-        width: 30%;
+        width: 40%;
         margin-right: 2%;
         margin-bottom: 30px;
     }
@@ -597,11 +599,11 @@ nav.active ul {
 /* Tablet and Mobile Responsive */
 @media (max-width: 1024px) {
     .program {
-        width: 90%;
+        width: 100%;
     }
 
     .program-card {
-        width: 48%;
+        width: 100%;
         margin-bottom: 20px;
     }
 }
